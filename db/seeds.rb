@@ -8,25 +8,25 @@
 
 require "csv"
 
-# actors = CSV.read("tabactor.txt", { :col_sep => "\t" })
-# actors.sort!
-# actors.each do |actor|
-#   next if actor[1].nil?
-#   Actor.create(id: actor[0], name: actor[1])
-# end
+actors = CSV.read("tabactor.txt", { :col_sep => "\t" })
+actors.sort!
+actors.each do |actor|
+  next if actor[1].nil?
+  Actor.create(id: actor[0], name: actor[1])
+end
 
 
-# movies = CSV.read("tabmovie.txt", { :col_sep => "\t" })
-# movies.sort!
-# movies.each do |movie|
-#   next if movie[1].nil? || movie[2].nil? || movie[3].nil?
-#   Movie.create(
-#   	id: movie[0], 
-#   	title: movie[1], 
-#   	yr: movie[2], 
-#   	director: movie[3]
-#   )
-# end
+movies = CSV.read("tabmovie.txt", { :col_sep => "\t" })
+movies.sort!
+movies.each do |movie|
+  next if movie[1].nil? || movie[2].nil? || movie[3].nil?
+  Movie.create(
+  	id: movie[0], 
+  	title: movie[1], 
+  	yr: movie[2], 
+  	director: movie[3]
+  )
+end
 
 
 castings = CSV.read("tabcasting.txt", { :col_sep => "\t" })
